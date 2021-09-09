@@ -1,0 +1,33 @@
+
+
+
+
+
+.Card-item {
+  display: block;
+  padding-bottom: 8px;
+}
+
+.Card{
+  margin-top: 16px;
+  width: 275px;
+}
+
+.RightActions{
+padding-right: 15px;
+
+}
+.CardButton{
+  width: 100%;
+}
+
+.CardContent{
+  padding: 16px;
+}
+
+form{
+  padding: 16px;
+}
+.CardField{
+  margin-bottom:  16px;
+}
