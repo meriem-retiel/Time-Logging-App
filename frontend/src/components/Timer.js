@@ -17,7 +17,7 @@ class Timer extends React.Component{
                 <IconButton aria-label="delete" >
                     <DeleteIcon fontSize="small" />
                 </IconButton>
-                <IconButton aria-label="delete" >
+                <IconButton onClick={this.props.handleFormOpen} aria-label="delete" >
                     <EditIcon fontSize="small" />
                 </IconButton>                </div>
                 </div>
