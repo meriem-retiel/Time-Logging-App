@@ -15,18 +15,22 @@ class TimerForm extends React.Component{
     }
     handleProjectInput=(e)=>{
         this.setState({
-            title: e.target.value
+            project: e.target.value
         })
+    }
+    handleSubmit=()=>{
+        this.props.handleSubmitForm(this.state)
+        console.log(this.state)
     }
     render(){
         const submitText= this.props.title?'Update':'Create';
         return(
             <Card className='Card' >
                <form  >
-                    <div className='CardField'><TextField onChange={this.state.handleTitleInput} className='Card-item'  id="filled-basic" label="Title" variant="filled" size='small' defaultValue={this.props.title}/></div>
-                    <div><TextField  onChange={this.state.handleProjectInput}  id="filled-basic" label="Project" variant="filled" size='small' defaultValue={this.props.project} /></div>
+                    <div className='CardField'> <TextField value={this.state.title} onChange={this.handleTitleInput} className='Card-item'  id="filled-basic" label="Title" variant="filled" size='small' defaultValue={this.props.title}/></div>
+                    <div><TextField value={this.state.project} onChange={this.handleProjectInput}  id="filled-basic" label="Project" variant="filled" size='small' defaultValue={this.props.project} /></div>
                     <div>
-                    <Button variant="contained" color="primary">{submitText}</Button>
+                    <Button onClick={this.handleSubmit} variant="contained" color="primary">{submitText}</Button>
                     <Button onClick={this.props.handleFormClose} variant="outlined" color="primary">Cancel</Button>
 
                     

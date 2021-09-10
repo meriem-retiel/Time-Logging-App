@@ -22,6 +22,7 @@ class EditableTimer extends React.Component{
         if (this.state.editFormOpen){
             return(
                 <TimerForm
+                id={this.props.id}
                     title={this.props.title}
                     project={this.props.project}
                     handleFormClose={this.handleFormClose}
@@ -30,11 +31,13 @@ class EditableTimer extends React.Component{
         }else{
             return(
                 <Timer
+                    id={this.props.id}
                     title={this.props.title}
                     project={this.props.project}
                     elapsed={this.props.elapsed}
                     runningSince={this.props.runningSince}
                     handleFormOpen={this.handleFormOpen}
+                    handleTimerDelete={this.props.handleTimerDelete}
                 />
             )
         }
